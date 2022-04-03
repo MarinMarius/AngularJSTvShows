@@ -2,7 +2,13 @@ angular.
     module('tvShowsApp').
     component('appHeader', {
         templateUrl: 'components/header/header.template.html',
+        bindings: {
+            key: '<',
+            onKeyChange: '&'
+        },
         controller: function HeaderController() {
-            console.log('header');
+            this.setKey = function () {
+                this.onKeyChange({ $event: { key: this.key } });
+            }.bind(this);
         }
     });

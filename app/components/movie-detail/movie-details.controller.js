@@ -11,11 +11,9 @@ angular.module('tvShowsApp')
                 $ctrl.modalData = $ctrl.resolve.modalData;
             }
             $ctrl.handleClose = function () {
-                console.info("in handle close");
                 $ctrl.modalInstance.close($ctrl.modalData);
             };
             $ctrl.handleDismiss = function () {
-                console.info("in handle dismiss");
                 $ctrl.modalInstance.dismiss("cancel");
             };
         }]

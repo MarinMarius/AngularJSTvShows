@@ -5,9 +5,9 @@
         </div>
         <form class="navbar-form navbar-right">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
+                <input ng-model="$ctrl.key" type="text" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" ng-click="$ctrl.setKey()" class="btn btn-success">Submit</button>
         </form>
     </div>
 </nav>
