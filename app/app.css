@@ -1,0 +1,17 @@
+.card {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px;   
+    height:570px;
+    position: relative;
+}
+
+.card-img-top {
+    width:100%;
+    height:auto;
+}
+
+.show-more-btn {
+    position: absolute;
+    bottom: 10px;
+}

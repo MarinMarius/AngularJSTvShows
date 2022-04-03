@@ -1,0 +1,1 @@
+angular.module('tvShowsApp', ['ngAnimate','ui.bootstrap']);
