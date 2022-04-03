@@ -1,13 +1,9 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand">TV Shows</a>
-        </div>
-        <form class="navbar-form navbar-right">
-            <div class="form-group">
-                <input ng-model="$ctrl.key" type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" ng-click="$ctrl.setKey()" class="btn btn-success">Submit</button>
+        <a class="navbar-brand" >TV Shows</a>
+        <form class="d-flex">
+            <input class="form-control me-2" ng-model="$ctrl.key" type="search" placeholder="Search" aria-label="Search">
+            <button ng-click="$ctrl.setKey()" class="btn btn-outline-light" type="submit">Search</button>
         </form>
     </div>
 </nav>

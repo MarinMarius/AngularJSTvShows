@@ -2,12 +2,10 @@
     <h3 class="modal-title">{{$ctrl.modalData.name}}</h3>
 </div>
 <div class="modal-body">
-    <img style="margin:auto; display:block" src="{{$ctrl.modalData.image.medium}}"/>
+    <img ng-if="$ctrl.modalData.image" style="margin:auto; display:block" src="{{$ctrl.modalData.image.medium}}" />
     <div>Rating: {{$ctrl.modalData.rating.average}}</div>
     <div>Genres: {{$ctrl.modalData.genres.join(', ')}}</div>
     <div>Summary: {{$ctrl.modalData.summary}}</div>
-    
-    
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" type="button" ng-click="$ctrl.handleDismiss()">OK</button>

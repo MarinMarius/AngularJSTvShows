@@ -7,16 +7,15 @@ angular.
         },
         controller: function DashboardController($http, $uibModal) {
             var ctrl = this;
-            this.$onInit = function () {
-                if (!this.key) {
-                    this.key = '';
-                }
-                this.getData();
-            }
+            // this.$onInit = function () {
+            //     if (!this.key) {
+            //         this.key = '';
+            //     }
+            //     this.getData();
+            // }
 
 
             this.$onChanges = function (obj) {
-                console.log('second-child changed one-way bindings', obj.key.currentValue);
                 this.getData();
             }
 
@@ -36,7 +35,6 @@ angular.
                         }
 
                     });
-                    console.log(this.shows);
                     this.dramaShows = this.shows.filter(s => s.show?.genres?.some(g => g === 'Drama'))?.slice(0, 4);
                     this.comedyShows = this.shows.filter(s => s.show?.genres?.some(g => g === 'Comedy'))?.slice(0, 4);
                     this.sportShows = this.shows.filter(s => s.show?.genres?.some(g => g === 'Sports'))?.slice(0, 4);

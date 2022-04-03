@@ -7,8 +7,15 @@ angular.
             onKeyChange: '&'
         },
         controller: function HeaderController() {
-            this.setKey = function () {
+            var $ctrl = this;
+            
+            $ctrl.$onInit = function () {
+                this.key = 'Luci';
+                this.setKey();
+            }
+
+            $ctrl.setKey = function () {
                 this.onKeyChange({ $event: { key: this.key } });
-            }.bind(this);
+            };
         }
     });

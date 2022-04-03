@@ -12,12 +12,11 @@ angular.
                 $ctrl.shows = $ctrl.inData;
             }
             $ctrl.$onChanges = function (obj) {
-                console.log('second-child changed one-way bindings', obj.inData.currentValue);
                 $ctrl.shows = obj.inData.currentValue;
             }
             this.openModal = function (data) {
                 $uibModal.open({
-                    component: "myModal",
+                    component: "movieDetail",
                     resolve: {
                         modalData: function () {
                             return data;
