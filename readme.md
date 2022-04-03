@@ -18,4 +18,4 @@ I have chosen to have a component based approach. This helps with both maintenan
 
 As I have discussed with Julia on the phone, I have kept the functionality to a minimum and have excluded unit tests, due to lack of time.
 
-One decision that I`m not that happy with regarding this project is that I have used both bootstrap 3 and bootstrap 5. In normal appliction, I would not do this, as this may have unexpected behaviour. In this case, due to lack of time, I have used both of them in order to speed up the development time. 
+One decision that I`m not that happy with regarding this project is that I have used both bootstrap 3 and bootstrap 5. In normal appliction, I would not do this, as this may have unexpected behaviour. In this case, due to lack of time, I have used both of them in order to speed up the development time (version 3 needed for modal functionality, and version 5 for easer styling of the cards). 
