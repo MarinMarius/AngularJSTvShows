@@ -2,23 +2,19 @@
     <div class="row">
         <h1 class="col-xl-12 col-md-12 col-sm-12">{{$ctrl.type}}</h1>
         <div ng-if="$ctrl.shows && $ctrl.shows.length">
-
-        
-        
-        <div class="col-lg-3 col-md-6 col-xsm-12" ng-repeat="show in $ctrl.shows">
-            <div class="card" style="min-height:570px">
-                <img ng-if="show.show.image" src="{{show.show.image.medium}}" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">{{show.show.name}}</h5>
-                  <p class="card-text">{{show.show.summaryOverview}}</p>
-                  <a ng-click="$ctrl.openModal(show.show)" class="btn btn-primary">Show more</a>
+            <div class="col-lg-3 col-md-6 col-xsm-12" ng-repeat="show in $ctrl.shows">
+                <div class="card" style="min-height:570px">
+                    <img ng-if="show.show.image" src="{{show.show.image.medium}}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{show.show.name}}</h5>
+                        <p class="card-text">{{show.show.summaryOverview}}</p>
+                        <a ng-click="$ctrl.openModal(show.show)" class="btn btn-primary">Show more</a>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
-    </div>
         <div ng-if="!$ctrl.shows || !$ctrl.shows.length">
             No shows match the key work and genre!
         </div>
     </div>
 </div>
-

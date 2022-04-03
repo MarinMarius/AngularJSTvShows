@@ -5,13 +5,13 @@ angular.module('tvShowsApp')
             modalInstance: "<",
             resolve: "<"
         },
-        controller: function MovieDetail () {
+        controller: function MovieDetail() {
             var $ctrl = this;
 
             $ctrl.$onInit = function () {
                 $ctrl.modalData = $ctrl.resolve.modalData;
             }
-            
+
             $ctrl.handleDismiss = function () {
                 $ctrl.modalInstance.dismiss("cancel");
             };

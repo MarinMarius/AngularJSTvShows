@@ -8,12 +8,15 @@ angular.
         },
         controller: function MobieListController($uibModal) {
             var $ctrl = this;
+
             $ctrl.$onInit = () => {
                 $ctrl.shows = $ctrl.inData;
             }
+
             $ctrl.$onChanges = function (obj) {
                 $ctrl.shows = obj.inData.currentValue;
             }
+            
             this.openModal = function (data) {
                 $uibModal.open({
                     component: "movieDetail",
@@ -22,11 +25,9 @@ angular.
                             return data;
                         }
                     }
-                }).result.then(function (result) {
-                    console.info("I was closed, so do what I need to do myContent's  controller now.  Result was->");
-                    console.info(result);
+                })
+                .result.then(function (result) {
                 }, function (reason) {
-                    console.info("I was dimissed, so do what I need to do myContent's controller now.  Reason was->" + reason);
                 });
             };
         }
